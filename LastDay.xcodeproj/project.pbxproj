@@ -7,6 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		3682D7B517D4685E00E011F1 /* Node.c in Sources */ = {isa = PBXBuildFile; fileRef = 3682D7B317D4685E00E011F1 /* Node.c */; };
 		E5428DB917D43FF600011186 /* main.c in Sources */ = {isa = PBXBuildFile; fileRef = E5428DB817D43FF600011186 /* main.c */; };
 		E5428DBB17D43FF600011186 /* LastDay.1 in CopyFiles */ = {isa = PBXBuildFile; fileRef = E5428DBA17D43FF600011186 /* LastDay.1 */; };
 /* End PBXBuildFile section */
@@ -25,6 +26,8 @@
 /* End PBXCopyFilesBuildPhase section */
 
 /* Begin PBXFileReference section */
+		3682D7B317D4685E00E011F1 /* Node.c */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.c; path = Node.c; sourceTree = "<group>"; };
+		3682D7B417D4685E00E011F1 /* Node.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = Node.h; sourceTree = "<group>"; };
 		E5428DB517D43FF600011186 /* LastDay */ = {isa = PBXFileReference; explicitFileType = "compiled.mach-o.executable"; includeInIndex = 0; path = LastDay; sourceTree = BUILT_PRODUCTS_DIR; };
 		E5428DB817D43FF600011186 /* main.c */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.c; path = main.c; sourceTree = "<group>"; };
 		E5428DBA17D43FF600011186 /* LastDay.1 */ = {isa = PBXFileReference; lastKnownFileType = text.man; path = LastDay.1; sourceTree = "<group>"; };
@@ -60,6 +63,8 @@
 		E5428DB717D43FF600011186 /* LastDay */ = {
 			isa = PBXGroup;
 			children = (
+				3682D7B417D4685E00E011F1 /* Node.h */,
+				3682D7B317D4685E00E011F1 /* Node.c */,
 				E5428DB817D43FF600011186 /* main.c */,
 				E5428DBA17D43FF600011186 /* LastDay.1 */,
 			);
@@ -118,6 +123,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				E5428DB917D43FF600011186 /* main.c in Sources */,
+				3682D7B517D4685E00E011F1 /* Node.c in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -214,6 +220,7 @@
 				E5428DC017D43FF600011186 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
 	};
