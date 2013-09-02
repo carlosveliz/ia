@@ -12,8 +12,6 @@
 #define PACKING_H
 
 // Algoritmo de Packing
-int PackingStart();
-int PackingStartWithBounds(int w, int h);
 int PackingStartWithFile(PackingFile *packingFile);
 
 #endif // PACKING_H

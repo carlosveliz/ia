@@ -111,6 +111,8 @@ int main(int argc, char const *argv[])
     }
     
     PackingFilePrint(packingFile, true);
+    
+    PackingStartWithFile(packingFile);
     PackingFileFree(packingFile);
     
 	return 0;

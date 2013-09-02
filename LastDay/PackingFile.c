@@ -21,11 +21,11 @@ PackingFile *PackingFileNewWithFile(FILE *file)
     // Inicializar con nada
     PackingFile *packingFile = malloc(sizeof(PackingFile));
     
-    packingFile->width  = 0;
-    packingFile->length = INT_MAX;
-    packingFile->lengthOptimum = INT_MAX;
-    packingFile->count  = 0;
-    packingFile->boxes  = NULL;
+    packingFile->width          = 0;
+    packingFile->height         = INT_MAX;
+    packingFile->heightOptimum  = INT_MAX;
+    packingFile->count          = 0;
+    packingFile->boxes          = NULL;
     
     // Leer primera linea
     {
@@ -44,7 +44,7 @@ PackingFile *PackingFileNewWithFile(FILE *file)
         ParseTabularLinePair(line, length, &left, &right);
         
         packingFile->width          = left;
-        packingFile->lengthOptimum  = right;
+        packingFile->heightOptimum  = right;
     }
     
     // Cargar N cajas
@@ -88,7 +88,7 @@ PackingFile *PackingFileNewWithFilename(char *filename)
 
 void PackingFilePrint(PackingFile *packingFile, bool printBoxes)
 {
-    printf("Packing Problem.\n  Limited to: %d wide\n  Optimum: %d\n", packingFile->width, packingFile->lengthOptimum);
+    printf("Packing Problem.\n  Limited to: %d wide\n  Optimum: %d\n", packingFile->width, packingFile->heightOptimum);
     
     if (printBoxes)
     {

@@ -18,8 +18,8 @@
 typedef struct
 {
     int width;
-    int length;  // Length is the undefined
-    int lengthOptimum;
+    int height;
+    int heightOptimum;
     
     int count;
     Box *boxes;
