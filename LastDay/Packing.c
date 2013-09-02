@@ -10,12 +10,14 @@
 #include "Packing.h"
 #include "Node.h"
 
-void PackingStart()
+int PackingStart()
 {
     PackingStartWithBounds(16, 1000);
+    
+    return 0;
 }
 
-void PackingStartWithBounds(int w, int h)
+int PackingStartWithBounds(int w, int h)
 {
     Node *root = NodeNewRoot();
     
@@ -48,4 +50,11 @@ void PackingStartWithBounds(int w, int h)
     Packer(11,2);*/
     
     NodeFreeRecursive(root);
+    
+    return 0;
+}
+
+int PackingStartWithFile(PackingFile *packingFile)
+{
+    return 0;
 }

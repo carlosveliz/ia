@@ -6,10 +6,14 @@
 //  Copyright (c) 2013 José Luis Canepa. All rights reserved.
 //
 
+#include "PackingFile.h"
+
 #ifndef PACKING_H
 #define PACKING_H
 
-void PackingStart();
-void PackingStartWithBounds(int w, int h);
+// Algoritmo de Packing
+int PackingStart();
+int PackingStartWithBounds(int w, int h);
+int PackingStartWithFile(PackingFile *packingFile);
 
 #endif // PACKING_H
