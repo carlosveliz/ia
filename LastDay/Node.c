@@ -8,6 +8,7 @@
 
 #include <stdio.h>
 #include <stdlib.h>
+#include <string.h>
 #include "Node.h"
 
 Node *NodeNew(int w, int h, int x, int y)
@@ -49,10 +50,7 @@ Node *NodeNewRoot()
 
 void NodeSetBox(Node *node, Box box)
 {
-    node->w = box.w;
-    node->h = box.h;
-    node->x = box.x;
-    node->y = box.y;
+    memcpy(node, &box, sizeof(Box));
 }
 
 void NodeSetLeftChild(Node *node, Node *child)
@@ -65,6 +63,25 @@ void NodeSetRightChild(Node *node, Node *child)
 {
     node->right = child;
     child->parent = node;
+}
+
+void NodePrint(Node *node)
+{
+    char *name = "Node";
+    
+    if (node->status == NodeStatusRoot)
+    {
+        name = "Root";
+    }
+    
+    if (node->status & NodeStatusComplete)
+    {
+        printf("%s (w:%d h:%d) (x:%d y:%d)", name, node->w, node->h, node->x, node->y);
+    }
+    else
+    {
+        printf("%s (w:%d h:%d) not placed", name, node->w, node->h);
+    }
 }
 
 void NodeFree(Node *node)

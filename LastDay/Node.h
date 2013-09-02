@@ -14,10 +14,10 @@
 // Estado de un nodo
 typedef enum
 {
-    NodeStatusUndefined = 0b00,
-    NodeStatusPartial   = 0b01,
-    NodeStatusComplete  = 0b01,
-    NodeStatusRoot      = 0b10,
+    NodeStatusUndefined = 0b000,
+    NodeStatusPartial   = 0b001,
+    NodeStatusComplete  = 0b011,
+    NodeStatusRoot      = 0b111,
 }NodeStatus;
 
 // Estructura que representa un sistema de coordenadas
@@ -49,6 +49,9 @@ Node *NodeNewRoot();
 void NodeSetBox(Node *node, Box box);
 void NodeSetLeftChild(Node *node, Node *child);
 void NodeSetRightChild(Node *node, Node *child);
+
+// Descriptor
+void NodePrint(Node *node);
 
 // Destructor
 void NodeFree(Node *node);

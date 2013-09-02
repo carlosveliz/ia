@@ -17,7 +17,9 @@ void PackingStart()
 
 void PackingStartWithBounds(int w, int h)
 {
-    Node *root = NodeNewPartial(0, 0);
+    Node *root = NodeNewRoot();
+    
+    NodePrint(root);
 
     /*
     root.w = w;
