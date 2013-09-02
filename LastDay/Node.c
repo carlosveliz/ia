@@ -33,6 +33,15 @@ Node *NodeNewPartial(int w, int h)
     return node;
 }
 
+Node *NodeNewRoot()
+{
+    Node *node = NodeNew(0, 0, 0, 0);
+    
+    node->status = NodeStatusRoot;
+    
+    return node;
+}
+
 void NodeSetBox(Node *node, Box box)
 {
     node->w = box.w;

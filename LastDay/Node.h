@@ -14,9 +14,10 @@
 // Estado de un nodo
 typedef enum
 {
-    NodeStatusUndefined,
-    NodeStatusPartial,
-    NodeStatusComplete,
+    NodeStatusUndefined = 0b00,
+    NodeStatusPartial   = 0b01,
+    NodeStatusComplete  = 0b01,
+    NodeStatusRoot      = 0b10,
 }NodeStatus;
 
 // Estructura que representa un sistema de coordenadas
@@ -42,6 +43,7 @@ typedef struct Node
 // Constructores de Node
 Node *NodeNew(int w, int h, int x, int y);
 Node *NodeNewPartial(int w, int h);
+Node *NodeNewRoot();
 
 // Setters
 void NodeSetBox(Node *node, Box box);
