@@ -27,7 +27,7 @@ typedef struct
 
 // Constructores
 PackingFile *PackingFileNewWithFile(FILE *file);
-PackingFile *PackingFileNewWithFilename(char *filename);
+PackingFile *PackingFileNewWithFilename(char const *filename);
 
 // Descriptor
 void PackingFilePrint(PackingFile *packingFile, bool printBoxes);

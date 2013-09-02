@@ -69,7 +69,7 @@ PackingFile *PackingFileNewWithFile(FILE *file)
     return packingFile;
 }
 
-PackingFile *PackingFileNewWithFilename(char *filename)
+PackingFile *PackingFileNewWithFilename(char const *filename)
 {
     FILE *file = fopen(filename, "r");
     

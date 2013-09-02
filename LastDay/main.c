@@ -102,7 +102,14 @@ void Packer(int w, int h){
 
 int main(int argc, char const *argv[])
 {
-    PackingFile *packingFile = PackingFileNewWithFilename("Sample/c1-p1.txt");
+    char const *filename = "Sample/c1-p1.txt";
+    
+    if (argc > 1)
+    {
+        filename = argv[1];
+    }
+    
+    PackingFile *packingFile = PackingFileNewWithFilename(filename);
     //PackingStartWithBounds(16, 1000);
     
     if (packingFile == NULL)
