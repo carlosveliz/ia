@@ -7,6 +7,7 @@
 //
 
 #include <stdio.h>
+#include <stdbool.h>
 
 #include "Node.h"
 
@@ -18,14 +19,18 @@ typedef struct
 {
     int width;
     int length;  // Length is the undefined
+    int lengthOptimum;
     
     int count;
-    Node *nodes;
+    Box *boxes;
 }PackingFile;
 
 // Constructores
 PackingFile *PackingFileNewWithFile(FILE *file);
 PackingFile *PackingFileNewWithFilename(char *filename);
+
+// Descriptor
+void PackingFilePrint(PackingFile *packingFile, bool printBoxes);
 
 // Destructor
 void PackingFileFree(PackingFile *packingFile);

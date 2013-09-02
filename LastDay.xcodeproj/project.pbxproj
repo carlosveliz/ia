@@ -10,11 +10,22 @@
 		3682D7B517D4685E00E011F1 /* Node.c in Sources */ = {isa = PBXBuildFile; fileRef = 3682D7B317D4685E00E011F1 /* Node.c */; };
 		3682D7B817D469ED00E011F1 /* Packing.c in Sources */ = {isa = PBXBuildFile; fileRef = 3682D7B617D469ED00E011F1 /* Packing.c */; };
 		3682D7BB17D4712000E011F1 /* PackingFile.c in Sources */ = {isa = PBXBuildFile; fileRef = 3682D7BA17D4712000E011F1 /* PackingFile.c */; };
+		3682D7C017D4798C00E011F1 /* c1-p1.txt in CopyFiles */ = {isa = PBXBuildFile; fileRef = 3682D7BD17D4791400E011F1 /* c1-p1.txt */; };
 		E5428DB917D43FF600011186 /* main.c in Sources */ = {isa = PBXBuildFile; fileRef = E5428DB817D43FF600011186 /* main.c */; };
 		E5428DBB17D43FF600011186 /* LastDay.1 in CopyFiles */ = {isa = PBXBuildFile; fileRef = E5428DBA17D43FF600011186 /* LastDay.1 */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXCopyFilesBuildPhase section */
+		3682D7BF17D4797E00E011F1 /* CopyFiles */ = {
+			isa = PBXCopyFilesBuildPhase;
+			buildActionMask = 12;
+			dstPath = ./Sample;
+			dstSubfolderSpec = 16;
+			files = (
+				3682D7C017D4798C00E011F1 /* c1-p1.txt in CopyFiles */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
 		E5428DB317D43FF600011186 /* CopyFiles */ = {
 			isa = PBXCopyFilesBuildPhase;
 			buildActionMask = 2147483647;
@@ -34,6 +45,7 @@
 		3682D7B717D469ED00E011F1 /* Packing.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = Packing.h; sourceTree = "<group>"; };
 		3682D7B917D4711A00E011F1 /* PackingFile.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = PackingFile.h; sourceTree = "<group>"; };
 		3682D7BA17D4712000E011F1 /* PackingFile.c */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.c; path = PackingFile.c; sourceTree = "<group>"; };
+		3682D7BD17D4791400E011F1 /* c1-p1.txt */ = {isa = PBXFileReference; lastKnownFileType = text; name = "c1-p1.txt"; path = "Sample/c1-p1.txt"; sourceTree = "<group>"; };
 		E5428DB517D43FF600011186 /* LastDay */ = {isa = PBXFileReference; explicitFileType = "compiled.mach-o.executable"; includeInIndex = 0; path = LastDay; sourceTree = BUILT_PRODUCTS_DIR; };
 		E5428DB817D43FF600011186 /* main.c */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.c; path = main.c; sourceTree = "<group>"; };
 		E5428DBA17D43FF600011186 /* LastDay.1 */ = {isa = PBXFileReference; lastKnownFileType = text.man; path = LastDay.1; sourceTree = "<group>"; };
@@ -50,9 +62,18 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		3682D7BC17D4790B00E011F1 /* Samples */ = {
+			isa = PBXGroup;
+			children = (
+				3682D7BD17D4791400E011F1 /* c1-p1.txt */,
+			);
+			name = Samples;
+			sourceTree = "<group>";
+		};
 		E5428DAC17D43FF600011186 = {
 			isa = PBXGroup;
 			children = (
+				3682D7BC17D4790B00E011F1 /* Samples */,
 				E5428DB717D43FF600011186 /* LastDay */,
 				E5428DB617D43FF600011186 /* Products */,
 			);
@@ -91,6 +112,7 @@
 				E5428DB117D43FF600011186 /* Sources */,
 				E5428DB217D43FF600011186 /* Frameworks */,
 				E5428DB317D43FF600011186 /* CopyFiles */,
+				3682D7BF17D4797E00E011F1 /* CopyFiles */,
 			);
 			buildRules = (
 			);

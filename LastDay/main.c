@@ -102,7 +102,16 @@ void Packer(int w, int h){
 
 int main(int argc, char const *argv[])
 {
-    PackingStartWithBounds(16, 1000);
+    PackingFile *packingFile = PackingFileNewWithFilename("Sample/c1-p1.txt");
+    //PackingStartWithBounds(16, 1000);
+    
+    if (packingFile == NULL)
+    {
+        return 1;
+    }
+    
+    PackingFilePrint(packingFile, true);
+    PackingFileFree(packingFile);
     
 	return 0;
 }
