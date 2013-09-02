@@ -117,7 +117,7 @@ void PackingFileFree(PackingFile *packingFile)
 
 void ParseTabularLinePair(char *line, size_t length, int *left, int *right)
 {
-    static char tmp[10];
+    char tmp[10];
     
     // Encontrar donde esta el \t (punto tab)
     int tab = 0;
