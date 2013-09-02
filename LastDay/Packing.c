@@ -44,4 +44,6 @@ void PackingStartWithBounds(int w, int h)
     Packer(4,4);
     Packer(9,2);
     Packer(11,2);*/
+    
+    NodeFreeRecursive(root);
 }

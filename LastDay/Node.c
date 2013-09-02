@@ -19,6 +19,11 @@ Node *NodeNew(int w, int h, int x, int y)
     node->x = x;
     node->y = y;
     
+    // Inicializar hijos
+    node->parent    = NULL;
+    node->left      = NULL;
+    node->right     = NULL;
+    
     node->status = NodeStatusComplete;
     
     return node;
@@ -67,17 +72,35 @@ void NodeFree(Node *node)
     // Indica al padre que debe indefinir su nodo
     Node *parent = node->parent;
     
-    if (parent->left == node)
+    if (parent)
     {
-        parent->left = NULL;
+        if (parent->left == node)
+        {
+            parent->left = NULL;
+        }
+        else
+        {
+            parent->right = NULL;
+        }
+        
+        node->parent = NULL;
     }
-    else
-    {
-        parent->right = NULL;
-    }
-    
-    node->parent = NULL;
     
     // Liberar
     free(node);
+}
+
+void NodeFreeRecursive(Node *node)
+{
+    if (node->left)
+    {
+        NodeFreeRecursive(node->left);
+    }
+    
+    if (node->right)
+    {
+        NodeFreeRecursive(node->right);
+    }
+    
+    NodeFree(node);
 }

@@ -51,6 +51,7 @@ void NodeSetLeftChild(Node *node, Node *child);
 void NodeSetRightChild(Node *node, Node *child);
 
 // Destructor
-void NodeFree();
+void NodeFree(Node *node);
+void NodeFreeRecursive(Node *root);
 
 #endif // NODE_H
