@@ -48,9 +48,9 @@ Node *NodeNewRoot()
     return node;
 }
 
-void NodeSetBox(Node *node, Box box)
+void NodeSetBox(Node *node, Box *box)
 {
-    memcpy(node, &box, sizeof(Box));
+    memcpy(node, box, sizeof(Box));
 }
 
 void NodeSetLeftChild(Node *node, Node *child)

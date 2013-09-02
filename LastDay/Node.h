@@ -46,7 +46,7 @@ Node *NodeNewPartial(int w, int h);
 Node *NodeNewRoot();
 
 // Setters
-void NodeSetBox(Node *node, Box box);
+void NodeSetBox(Node *node, Box *box);
 void NodeSetLeftChild(Node *node, Node *child);
 void NodeSetRightChild(Node *node, Node *child);
 
